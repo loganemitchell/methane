@@ -2,10 +2,18 @@
 """
 Created on Thu Nov 11 16:07:50 2021
 
+These are simple unit conversions to understand the scale of methane leakage
+from the Uinta Basin natural gas infrastructure. The original data comes from
+this research paper from John Lin et al (2021)
+https://www.nature.com/articles/s41598-021-01721-5
+
+Here is a press release about the study:
+https://attheu.utah.edu/facultystaff/uinta-basin-methane/
+
 @author: Logan Mitchell
 """
 
-#%%
+#%% Calculations to find methane leakage rates in Russian natural gas
 
 # https://www.iea.org/countries/russia
 tj = 25786288 # EIA ch4 production in 2013 in terrajoules
@@ -14,7 +22,7 @@ mmcf = tj*0.94781712 # terrajoules to million cubic feet of natural gas
 # https://www.ucsusa.org/sites/default/files/attach/2015/03/climate-risks-of-natural-gas-fugitive-methane-emissions_methodology.pdf
 # Mass Density from UCS = 0.678 kg/m3 (specific vol=1.474 m3/kg)
 # Another gas density calculator: https://www.unitrove.com/engineering/tools/gas/natural-gas-density
-# Mass Density (15C, 96.5% CH4 content) = 0.712 kg/m3 (specific vol=1.405 m3/kg)
+# Mass Density (15C, 96.5% CH4 content) = 0.712 kg/m3 (specific vol=1.405 m3/kg) ** This is most appropriate
 # Mass Density (21C, 96.5% CH4 content) = 0.698 kg/m3 (specific vol=1.433 m3/kg)
 # mmtch4 = mmcf*(meter^3/feet^3)*(mass density kg/m3)*(1metric ton/1000kg)
 mmtch4 = mmcf*0.0283168*0.712*(1/1e3) # mmcf to million metric tons CH4
@@ -26,7 +34,6 @@ mmtch4 = mmcf*0.0283168*0.712*(1/1e3) # mmcf to million metric tons CH4
 pctleak_high = 100*33/mmtch4 # = 6.7% leakage
 pctleak_low = 100*5/mmtch4   # = 1% leakage
 
-100*34/mmtch4
 # So, Russian gas leakage estimates are 1% on the low end & 6.7% on the high end.
 # Uinta Basin gas leakage is as high as the highest estimates of Russian gas leakage.
  
@@ -39,7 +46,7 @@ pctleak_low = 100*5/mmtch4   # = 1% leakage
 45*24*365 #= 394200 (2015)
 25*24*365 #= 219000 (2020)
 
-# I just saw that the reconciliation bill is proposing a $900/ton fee for methane leakage.  
+# The reconciliation bill is proposing a $900/ton fee for methane leakage.  
 # That would mean that the Uinta basin operators could be paying $197-354 million in leakage fees per year.
 45*24*365*900 #= $354780000 (2015)
 25*24*365*900 #= $197100000 (2020)
