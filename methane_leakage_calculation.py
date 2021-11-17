@@ -40,7 +40,7 @@ pctleak_low = 100*5/mmtch4   # = 1% leakage
 25*24*365 #= 219000 (2020)
 
 # I just saw that the reconciliation bill is proposing a $900/ton fee for methane leakage.  
-# That would mean that the Uinta basin operators should be paying $197-315 million in leakage fees per year.
+# That would mean that the Uinta basin operators could be paying $197-354 million in leakage fees per year.
 45*24*365*900 #= $354780000 (2015)
 25*24*365*900 #= $197100000 (2020)
 
@@ -48,25 +48,6 @@ pctleak_low = 100*5/mmtch4   # = 1% leakage
 # GWP of CH4 pg 73 https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter08_FINAL.pdf
 gwp100 = 28
 gwp20 = 84
-
-#%% Comparison of methane leakage with cars
-
-# A typical passenger vehicle emits 4.6 tons of CO2/yr
-# https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
-
-# 2012
-55*24*365*gwp20/4.6 # = 8,798,086 cars! (using the 20yr GWP of CH4)
-55*24*365*gwp100/4.6 # = 2,932,695 cars! (using the 100yr GWP of CH4)
-
-# 2015
-45*24*365*gwp20/4.6 # = 7,198,434 cars! (using the 20yr GWP of CH4)
-45*24*365*gwp100/4.6 # = 2,399,478 cars! (using the 100yr GWP of CH4)
-
-# 2020
-25*24*365*gwp20/4.6 # = 3,999,130 cars! (using the 20yr GWP of CH4)
-25*24*365*gwp100/4.6 # = 1,333,043 cars! (using the 100yr GWP of CH4)
-
-# in 2017 Utah had a total of 2.3 million cars and trucks registered in the state
 
 #%% Comparison of methane leakage in terms of Utah's CO2 emissions
 
@@ -115,5 +96,24 @@ gwp20 = 84
 100*(((25*24*365*gwp20/1e6)+61.1)/61.1-1) # = +30.1% (2020)
 100*(((25*24*365*gwp100/1e6)+61.1)/61.1-1) # = +10.0% (2020)
 
+#%% Comparison of methane leakage with cars
+
+# A typical passenger vehicle emits 4.6 tons of CO2/yr
+# https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
+
+# 2012
+55*24*365*gwp20/4.6 # = 8,798,086 cars! (using the 20yr GWP of CH4)
+55*24*365*gwp100/4.6 # = 2,932,695 cars! (using the 100yr GWP of CH4)
+
+# 2015
+45*24*365*gwp20/4.6 # = 7,198,434 cars! (using the 20yr GWP of CH4)
+45*24*365*gwp100/4.6 # = 2,399,478 cars! (using the 100yr GWP of CH4)
+
+# 2020
+25*24*365*gwp20/4.6 # = 3,999,130 cars! (using the 20yr GWP of CH4)
+25*24*365*gwp100/4.6 # = 1,333,043 cars! (using the 100yr GWP of CH4)
+
+# https://tax.utah.gov/econstats/mv/registrations
+# in 2021 Utah had a total of 2.7 million cars and trucks registered in the state
 
 
