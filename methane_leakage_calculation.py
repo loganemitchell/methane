@@ -70,9 +70,6 @@ gwp20 = 84
 25*24*365*gwp20/1e6 # = 18.4 Million Metric Tons CO2 (2020)
 25*24*365*gwp100/1e6 # = 6.1 Million Metric Tons CO2 (2020)
 
-18*24*365*gwp20/1e6 # = 18.4 Million Metric Tons CO2 (2020)
-
-
 # https://www.eia.gov/environment/emissions/state/
 
 # EIA: Table 4. 2018 State energy-related carbon dioxide emissions by sector (Million metric tons CO2)
