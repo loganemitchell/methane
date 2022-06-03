@@ -51,6 +51,19 @@ pctleak_low = 100*5/mmtch4   # = 1% leakage
 45*24*365*900 #= $354780000 (2015)
 25*24*365*900 #= $197100000 (2020)
 
+#%% Social Cost of methane
+
+# In 2015 the EPA calculated the social cost of CH4 as being:
+# in 2015: $1000/ton
+# in 2020: $1200/ton
+# in 2025: $1400/ton
+# in 2030: $1600/ton
+# Ref: https://19january2017snapshot.epa.gov/climatechange/social-cost-carbon_.html
+# Using those values, the social cost of CH4 leakage from the Uinta Basin was:
+    
+45*24*365*1000 #= $394,200,000 (2015)
+25*24*365*1200 #= $262,800,000 (2020)
+
 #%% GWP of CH4 from IPCC
 # GWP of CH4 pg 73 https://www.ipcc.ch/site/assets/uploads/2018/02/WG1AR5_Chapter08_FINAL.pdf
 gwp100 = 28
@@ -119,5 +132,32 @@ gwp20 = 84
 
 # https://tax.utah.gov/econstats/mv/registrations
 # in 2021 Utah had a total of 2.7 million cars and trucks registered in the state
+
+#%% Production and consumption data in Utah
+
+# Overall EIA state energy profile:
+# https://www.eia.gov/state/analysis.php?sid=UT#47
+
+# Natural gas production in Utah is about equal to consumption. 
+# Between the mid-1990s & 2005 production was around 250,000 MCF. It increased
+# after the fracking boom up to a peak of 490,000 MCF in 2012, then fell back to 
+# 240,000 MCF in 2020 due to low natural gas prices.
+# EIA Production data: https://www.eia.gov/dnav/ng/ng_prod_sum_dc_sut_mmcf_a.htm
+# EIA Production chart: https://www.eia.gov/dnav/ng/hist/n9050ut2a.htm
+# 
+# Consumption was around 140,000MCF in the 1990s through 2005, then it increased
+# to 200,000 MCF until 2018 when it increased again to 220,000 MCF
+# EIA Consumption data: https://www.eia.gov/dnav/ng/ng_cons_sum_dcu_SUT_a.htm 
+# EIA Consumption chart: https://www.eia.gov/dnav/ng/hist/n3060ut2a.htm
+
+# In 2012:
+100*178941/490393 # = Natural gas consumption was 36.5% of the volume produced in Utah
+# In 2015:
+100*188297/417020 # = Natural gas consumption was 45.1% of the volume produced in Utah
+# In 2020:
+100*225523/241989 # = Natural gas consumption was 93.2% of the volume produced in Utah
+# in 2021:
+100*223020/238884 # = Natural gas consumption was 93.4% of the volume produced in Utah
+
 
 
